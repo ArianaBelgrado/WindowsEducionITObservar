@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WindowsEducionITObservar.Models
 {
+    [Table("Detalle")]
     public class Detalle
     {
         [Key]
@@ -16,6 +17,9 @@ namespace WindowsEducionITObservar.Models
         [ForeignKey("PlanillaId")]
         public int EstadoId { get; set; }
         [ForeignKey("EstadoId")]
+        public List<Estado> estados{ get; set;}
+
+        public List<Planilla> planillas { get; set; }
 
     }
 }

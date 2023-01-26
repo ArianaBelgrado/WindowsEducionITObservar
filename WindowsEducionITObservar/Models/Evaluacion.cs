@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WindowsEducionITObservar.Models
 {
+    [Table("Evaluacion")]
     public class Evaluacion
     {
         [Key]
@@ -23,5 +24,7 @@ namespace WindowsEducionITObservar.Models
         [StringLength(50)]
         [Required]
         public string Nota { get; set; }
+        public Estudiante estudiante { get; set; }
+        public List<Tipo> tipos { get; set; }
     }
 }

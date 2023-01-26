@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WindowsEducionITObservar.Models
 {
+    [Table("Profesor")]
     public class Profesor
     {
         [Key]
@@ -24,5 +25,8 @@ namespace WindowsEducionITObservar.Models
         [StringLength(50)]
         [Required]
         public string Apellido { get; set; }
+
+        public List<Planilla> planillas { get; set; }
+        public Localidad localidad { get; set; }
     }
 }

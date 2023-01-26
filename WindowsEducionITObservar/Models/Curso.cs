@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsEducionITObservar.Models
 {
+    [Table("Curso")]
     public class Curso
     {
         [Key]
@@ -17,5 +19,7 @@ namespace WindowsEducionITObservar.Models
         [StringLength(50)]
         [Required]
         public string Nombre { get; set; }
+
+        public List<Planilla> planillas { get; set; }
     }
 }

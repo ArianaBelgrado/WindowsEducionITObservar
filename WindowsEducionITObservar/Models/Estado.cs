@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WindowsEducionITObservar.Models
 {
+    [Table("Estado")]
     public class Estado
     {
         [Key]
@@ -18,6 +19,7 @@ namespace WindowsEducionITObservar.Models
         [Required]
         public string Nombre { get; set; }
         
+        public Detalle detalle { get; set; }
         
     }
 }

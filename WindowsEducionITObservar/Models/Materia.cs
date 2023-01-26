@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace WindowsEducionITObservar.Models
 {
+    [Table("Materia")]
     public class Materia
     {
-        [Key]
+
         public int MateriaId { get; set; }
 
         [Column(TypeName = "varchar")]
         [StringLength(50)]
         [Required]
         public string Nombre { get; set; }
+
+        public List<Planilla> planillas { get; set; }
     }
 }
